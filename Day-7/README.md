@@ -94,7 +94,7 @@ This project can be implemented using:
 
 ### Step 1: Create Resource Group
 
-* Resource Group Name: `respurce-group`
+* Resource Group Name: `resource-group`
 * Region: East US
 
 ---
