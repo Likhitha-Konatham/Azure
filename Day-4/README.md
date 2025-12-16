@@ -121,7 +121,7 @@ Azure provides different VM types for specific workloads:
 
 7. **Access Jenkins via browser**
 
-http://<VM-Public-IP>:8080
+http://<VM-Public-IP-ADDRESS>:8080
 
 8. **Complete initial setup**
    - Unlock Jenkins using the initial admin password.
