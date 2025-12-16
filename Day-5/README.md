@@ -64,8 +64,6 @@
 - Force traffic through firewalls
 - Customize routing instead of using default routes
 
----
-
 ## Network Security Group (NSG)
 - An **NSG** acts like a firewall for your Azure resources.
 - You can allow or deny **inbound** and **outbound** traffic.
@@ -76,8 +74,6 @@
   - Allow SSH (port 22)
   - Allow HTTP/HTTPS (ports 80/443)
   - Deny all other traffic
-
----
 
 ## What NSGs Control
 NSGs decide traffic based on:
