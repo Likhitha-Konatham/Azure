@@ -1,4 +1,4 @@
-# Day-2: Getting Started with Microsoft Azure
+# Getting Started with Microsoft Azure
 
 ## Microsoft Azure Overview
 
