@@ -55,7 +55,7 @@ Lower priority number = higher importance
 
 ## 3. Are Azure NSGs stateful or stateless?
 
-✅ **Azure NSGs are stateful**.
+**Azure NSGs are stateful**.
 
 ### What does stateful mean?
 
@@ -157,7 +157,7 @@ Resource Groups help you **manage Azure resources easily**.
 * Supports TCP/UDP traffic
 * Very fast and simple
 
-### Simple difference:
+### difference:
 
 * **Application Gateway** → smart, web-aware routing
 * **Load Balancer** → fast, basic traffic distribution
