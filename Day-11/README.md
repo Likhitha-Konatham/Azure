@@ -131,7 +131,7 @@ Add this to the ARM template outputs to return the storage account name:
 ## Step 6: Cleanup Resources
 
 ```bash
-az group delete --name myStorageRG --yes --no-wait
+az group delete --name storageRG --yes --no-wait
 ```
 
 ---
