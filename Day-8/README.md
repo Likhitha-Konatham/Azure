@@ -236,7 +236,3 @@ Azure Bastion provides **secure remote access** to VMs.
 * Application Gateway = Layer 7
 * Load Balancer = Layer 4
 * Bicep/ARM deploy everything through ARM
-
----
-
-Happy Learning 🚀
