@@ -126,7 +126,7 @@ stages:
         tags: '$(tag)'
     
 - stage: Push
-  displayName: Build Image
+  displayName: Push Image
   jobs:
   - job: Push
     displayName: Push 
