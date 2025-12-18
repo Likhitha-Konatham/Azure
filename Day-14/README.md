@@ -109,45 +109,36 @@ trigger:
 pool:
   name: 'azureagent'
 
-variables:
-  imageRepository: 'result'
-  dockerfilePath: '$(Build.SourcesDirectory)/result/Dockerfile'
-  dockerRegistryServiceConnection: '<ACR-Service-Connection>'
-  tag: '$(Build.BuildId)'
-  vmImageName: 'ubuntu-latest'
-
 stages:
 - stage: Build
   displayName: Build Image
   jobs:
   - job: Build
+    displayName: Build
     steps:
     - task: Docker@2
-      displayName: Build Docker Image
+      displayName: Build the image to container registry
       inputs:
-        command: build
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
-
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'build'
+        Dockerfile: 'result/Dockerfile'
+        tags: '$(tag)'
+    
 - stage: Push
-  displayName: Push Image
-  dependsOn: Build
+  displayName: Build Image
   jobs:
   - job: Push
-    pool:
-      vmImage: $(vmImageName)
+    displayName: Push 
     steps:
     - task: Docker@2
-      displayName: Push Docker Image
+      displayName: push the image to container registry
       inputs:
-        command: push
-        repository: $(imageRepository)
-        containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'build'
+        Dockerfile: 'result/Dockerfile'
+        tags: '$(tag)'
 ```
 
 4. Click **Save and run**
@@ -160,11 +151,6 @@ Repeat the same steps for the remaining services:
 
 * `vote` → `azure-pipelines-vote.yml`
 * `worker` → `azure-pipelines-worker.yml`
-
-Change only:
-
-* The **path filter** (`vote/*`, `worker/*`)
-* The **imageRepository** and **Dockerfile path**
 
 ---
 
