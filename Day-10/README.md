@@ -70,7 +70,7 @@ Get VM public IP:
 
 ```bash
 az vm show \
-  --resource-group myResourceGroup \
+  --resource-group azure-cli \
   --name myUbuntuVM \
   --show-details \
   --query publicIps \
@@ -92,7 +92,7 @@ ssh azureuser@<PUBLIC_IP>
 ```bash
 az storage account create \
   --name mystorageacct123 \
-  --resource-group myResourceGroup \
+  --resource-group azure-cli \
   --location eastus \
   --sku Standard_LRS \
   --kind StorageV2
@@ -103,7 +103,7 @@ Verify storage account:
 ```bash
 az storage account show \
   --name mystorageacct123 \
-  --resource-group myResourceGroup \
+  --resource-group azure-cli \
   --output table
 ```
 
@@ -116,7 +116,7 @@ Get storage account key:
 ```bash
 az storage account keys list \
   --account-name mystorageacct123 \
-  --resource-group myResourceGroup \
+  --resource-group azure-cli \
   --output table
 ```
 
