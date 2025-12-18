@@ -92,10 +92,6 @@ Storage Account (Blob Container)
 
 ## 5. Demo: Create Resources (Azure Portal / UI Steps)
 
-> Below steps explain how to perform the entire demo **using Azure Portal (UI)** without Azure CLI.
-
----
-
 ### Step 1: Create Resource Group (UI)
 
 1. Login to **Azure Portal**
