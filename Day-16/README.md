@@ -79,9 +79,3 @@ This document explains the **different ways a DevOps engineer can set up a Kuber
 
 **Summary:** On-premises clusters provide more control and flexibility; AKS trades some control for ease of use.
 
----
-
-## 7. Recommendations
-
-- **Fresher / Beginners:** Start with **AKS** to focus on learning Kubernetes concepts without worrying about maintenance.
-- **Experienced DevOps Engineers:** Consider **self-managed Kubernetes** on Azure VMs if you need full control and are comfortable managing upgrades, scaling, and integrations.
