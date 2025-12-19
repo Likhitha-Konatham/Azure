@@ -60,7 +60,7 @@ This document explains the **different ways a DevOps engineer can set up a Kuber
 
 ---
 
-## 5. Integration & Ecosystem
+## 5. Integration
 
 | Feature | On-Premises | Azure VMs | AKS |
 |---------|------------|-----------|-----|
