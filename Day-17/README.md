@@ -37,13 +37,10 @@ Three-Tier Architecture separates an application into three logical layers:
 
 User
 |
-▼
 Frontend (Web UI / NGINX)
 |
-▼
 Backend Microservices (Kubernetes Pods)
 |
-▼
 Databases (MongoDB / MySQL / Redis)
 
 This is a **microservices-based implementation** of a three-tier architecture.
