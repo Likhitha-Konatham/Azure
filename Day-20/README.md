@@ -23,7 +23,7 @@ The goal is to **avoid hardcoding secrets** in Kubernetes manifests and securely
 
 Pod (ServiceAccount)
 |
-| Workload Identity (OIDC)
+Workload Identity (OIDC)
 |
 Azure AD Managed Identity
 |
@@ -44,7 +44,7 @@ Secrets mounted into Pod (CSI Driver)
 
 ---
 
-## 1️AKS Setup Using Azure CLI
+## AKS Setup Using Azure CLI
 
 ### Create Azure Resource Group
 
@@ -83,7 +83,7 @@ kubectl get pods -n kube-system \
 -l 'app in (secrets-store-csi-driver,secrets-store-provider-azure)' -o wide
 You should see CSI driver pods running on each node.
 
-2️Azure Key Vault Creation
+Azure Key Vault Creation
 Create a Key Vault with Azure RBAC enabled:
 
 az keyvault create \
@@ -232,26 +232,19 @@ Read Secret Value:
 
 kubectl exec busybox-secrets-store-inline-wi -- cat /mnt/secrets-store/secret1
 
+
 Security Best Practices Followed:
 
-No secrets stored in YAML files
-
-No Kubernetes Secrets created manually
-
-Azure RBAC used instead of access policies
-
-Workload Identity used instead of service principal secrets
-
-Least privilege access applied
+1. No secrets stored in YAML files
+2. No Kubernetes Secrets created manually
+3. Azure RBAC used instead of access policies
+4. Workload Identity used instead of service principal secrets
+5. Least privilege access applied
 
 This project demonstrates:
 
-Secure secrets management on AKS
-
-Integration of Azure Key Vault using CSI Driver
-
-Use of Azure Workload Identity
-
-Enterprise-grade Kubernetes security practices
-
-This approach is recommended for production AKS workloads.
+1. Secure secrets management on AKS
+2. Integration of Azure Key Vault using CSI Driver
+3. Use of Azure Workload Identity
+4. Enterprise-grade Kubernetes security practices
+5. This approach is recommended for production AKS workloads.
