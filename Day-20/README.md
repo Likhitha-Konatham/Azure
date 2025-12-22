@@ -46,9 +46,9 @@ Secrets mounted into Pod (CSI Driver)
 
 ## AKS Setup Using Azure CLI
 
-### Create Azure Resource Group
-
 ```bash
+Create Azure Resource Group
+
 az group create --name keyvault-demo --location centralindia
 
 Create AKS Cluster with Key Vault CSI Driver Support
@@ -231,9 +231,9 @@ kubectl exec busybox-secrets-store-inline-wi -- ls /mnt/secrets-store/
 Read Secret Value:
 
 kubectl exec busybox-secrets-store-inline-wi -- cat /mnt/secrets-store/secret1
+```
 
-
-Security Best Practices Followed:
+## Security Best Practices Followed:
 
 1. No secrets stored in YAML files
 2. No Kubernetes Secrets created manually
@@ -241,7 +241,9 @@ Security Best Practices Followed:
 4. Workload Identity used instead of service principal secrets
 5. Least privilege access applied
 
-This project demonstrates:
+---
+
+## This project demonstrates:
 
 1. Secure secrets management on AKS
 2. Integration of Azure Key Vault using CSI Driver
