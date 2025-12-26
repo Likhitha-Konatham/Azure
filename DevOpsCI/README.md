@@ -73,9 +73,6 @@ result/
 vote/
 worker/
 
-yaml
-Copy code
-
 ---
 
 ## 5. Create CI Pipelines
