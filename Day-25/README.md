@@ -117,5 +117,4 @@ Once configured, the process is fully automated:
 - No Kubernetes YAML authored by developers
 - Kubernetes deployments become developer-friendly
 - Git is the single source of truth
-
-CI/CD setup completed in minutes
+- CI/CD setup completed in minutes
