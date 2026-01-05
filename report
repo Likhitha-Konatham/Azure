@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+
+# generate_server_report_html.py
+
+
+import paramiko
+from datetime import datetime, timedelta
+import html
+import sys
+import os
+
+
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+
+# ---------------- CONFIGURE SERVER DETAILS ----------------
+
+
+SERVER_LIST = [
+{
+"host": "10.4.25.210",
