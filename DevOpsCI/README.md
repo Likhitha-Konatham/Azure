@@ -61,9 +61,6 @@ You should now see the Azure DevOps dashboard.
 
 https://github.com/dockersamples/example-voting-app
 
-markdown
-Copy code
-
 5. Click **Import**
 6. Wait for the import to complete
 
